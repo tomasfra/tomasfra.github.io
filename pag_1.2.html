@@ -11,19 +11,24 @@
             }
 
             main {
-                text-align: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
                 padding: 20px;
+                text-align: center;
             }
 
             a {
                 display: block;
-                margin: 15px;
-                padding: 10px;
-                border: 1px solid #000;
-                border-radius: 10px;
+                padding: 20px;
+                color: white;
+                border-radius: 5px;
                 text-decoration: none;
-                color: black;
                 font-size: 1.2em;
+            }
+
+            .tipo_esporte {
+                background-color: #4CAF50; /* Verde */
             }
 
             footer {
@@ -42,15 +47,16 @@
     </head>
     <body>
         <main>
-            <a href="pag_1.2.html">Musculação</a>
-            <a href="tela_corrida.html">Corrida</a>
-            <a href="tela_natacao.html">Natação</a>
+            <a href="pag_1.3.html" class="tipo_esporte">Peito</a>
+            <a href="tela_costas.html" class="tipo_esporte">Costas</a>
+            <a href="tela_perna.html" class="tipo_esporte">Perna</a>
+            <a href="tela_triceps.html" class="tipo_esporte">Tríceps</a>
         </main>
         <footer>
             <a href="tela_inicio.html"><img src="icone_casa.png" alt="Inicio"></a>
             <a href="tela_loja.html"><img src="icone_loja.png" alt="Loja"></a>
             <a href="tela_treinos.html"><img src="icone_mais.png" alt="Treinos"></a>
-            <a href="pag_1.2.html"><img src="icone_lupa.png" alt="Busca"></a>
+            <a href="pag_1.1.html"><img src="icone_lupa.png" alt="Busca"></a>
             <a href="tela_ajustes.html"><img src="icone_ajustes.png" alt="Ajustes"></a>
         </footer>
     </body>
