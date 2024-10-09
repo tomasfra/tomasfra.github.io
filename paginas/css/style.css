@@ -1,5 +1,11 @@
 footer{
-
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
-    align-content: flex-end;
+    align-content: flex-start;
+}
+
+footer img{
+    width: 5rem;
+    height: 5rem;
 }
