@@ -209,3 +209,30 @@ p, li {
 ul {
     padding-left: 20px;
 }
+
+.produtos-list{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px; /* Espaço entre as imagens */
+}
+
+.produtos-list li {
+    flex-basis: calc(33.33% - 10px); /* Para 3 imagens por linha */
+    /* Ou use: flex-basis: calc(50% - 10px); para 2 imagens por linha */
+}
+  
+.produtos-list img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+  
+/* Para telas menores, ajuste para 2 imagens por linha */
+@media (max-width: 768px) {
+.produtos-list li {
+      flex-basis: calc(50% - 10px);
+    }
+}
