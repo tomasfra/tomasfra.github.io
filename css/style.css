@@ -1,11 +1,50 @@
-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: flex-start;
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
-footer img{
-    width: 5rem;
-    height: 5rem;
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Center header content */
+}
+
+header img {
+    width: 30%;
+    height: auto;
+}
+
+main {
+    flex: 1;
+    display: flex;
+}
+
+main img {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    width: 70%;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    background-color: cornflowerblue;
+    margin: 0.2rem; 
+    padding: 0.3rem;
+    width: 100%; 
+}
+
+footer img {
+    width: 30%;
+    height: auto;
+    background-color: blanchedalmond;
+    padding: 0.3rem;
 }
