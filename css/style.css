@@ -127,12 +127,60 @@ footer a:hover {
     font-style: italic;
 }
 
-.container {
+.container {/*conteiner principal das paiginas que o possuem */
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+.opcao_esporte { /*os links da pagina 1.1*/
+    display: block;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.opicaoesporte-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.opicaoesporte-list li {
+    margin-bottom: 15px;
+}
+
+.grupo_muscular { /*os links da pagina 1.2*/
+    display: block;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.grupo_muscular:hover {
+    background-color: #2980b9;
+}
+
+.workout-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.workout-list li {
+    margin-bottom: 15px;
+}
+  
 
 
 .image_peito {
