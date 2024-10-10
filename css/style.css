@@ -92,6 +92,9 @@ footer a:hover {
     color: #6200ea;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-family: "DM sans", serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .treino-item:hover {
@@ -108,6 +111,9 @@ footer a:hover {
     border-radius: 10px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    font-family: "DM sans", serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .treino-criar:hover {
@@ -270,4 +276,16 @@ label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+}
+
+.DMsans-titulo {
+    font-family: "DM sans", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.DMsans-texto {
+    font-family: "DM sans", serif;
+    font-weight: 400;
+    font-style: normal;
 }
