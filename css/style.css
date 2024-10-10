@@ -236,3 +236,32 @@ ul {
       flex-basis: calc(50% - 10px);
     }
 }
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 0;
+}
+
+.botao_ok {
+    display: block;
+    width: 10%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #6495ED;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+}
+
+.exercise_imput {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
