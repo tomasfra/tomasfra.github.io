@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (treino of listatreinos) {
             let treinoItem = document.createElement('a');
             treinoItem.classList.add('treino-item');
-            treinoItem.textContent = `${treino.titulo} - ${treino.exercicio}`;
+            treinoItem.innerHTML = treino.titulo;
             treinos.appendChild(treinoItem);
         };
     }
