@@ -13,4 +13,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         window.location.href = 'pag_2.1.html'; // Redireciona para a página de treinos
     });
+   
+    let listatreinos = JSON.parse(localStorage.getItem('treinos')) || []; // Recupera os treinos do localStorage
+    
+    let treinos = document.getElementById('treinos');
+    if (listatreinos.length > 0) {
+        for (treino of listatreinos) {
+            let treinoItem = document.createElement('a');
+            treinoItem.classList.add('treino-item');
+            treinoItem.textContent = `${treino.titulo} - ${treino.exercicio}`;
+            treinos.appendChild(treinoItem);
+        };
+    }
 })
