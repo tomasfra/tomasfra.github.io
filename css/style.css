@@ -51,10 +51,10 @@ h1 {
     background-color: #ffffff;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    border-radius: 10px;
+    border-radius: 0.6rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 800px;
+    max-width: 50rem;
 }
 
 .treino h2 {
@@ -148,7 +148,7 @@ footer a:hover {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto;
     padding: 0 1.25rem;
 }
