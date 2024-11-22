@@ -78,7 +78,7 @@ function salvarTreino() {
 window.onload = function() {
     const treinos = JSON.parse(localStorage.getItem('treinos')) || [];
     const treinosContainer = document.getElementById("treinos");
-    treinosContainer.innerHTML = ''; // Limpa o conteúdo anterior, se houver
+    treinosContainer.innerHTML = ''; 
 
     // Verifica se há treinos armazenados e os exibe
     if (treinos.length === 0) {
@@ -101,7 +101,7 @@ window.onload = function() {
         });
     }
 
-    // Mostrar botão "Adicionar Novo Treino" se não houver treinos
+    
     const adicionarTreinoButton = document.querySelector('a.botao_ok');
     if (treinos.length < 1) {
         adicionarTreinoButton.style.display = 'inline-block';
@@ -134,22 +134,22 @@ function adicionarTreino() {
         const treinos = JSON.parse(localStorage.getItem('treinos')) || [];
         treinos.push({ titulo, exercicios });
         localStorage.setItem('treinos', JSON.stringify(treinos));
-        window.location.href = 'pag_2.2.html'; // Redireciona para a página de treinos
+        window.location.href = 'pag_2.2.html'; 
     } else {
         alert("Por favor, preencha todos os campos.");
     }
 }
 // Função para adicionar um novo exercício ao formulário
 function adicionarExercicio() {
-    // Pega o número de exercícios já adicionados
+    
     const numeroExercicios = document.querySelectorAll('.exercicio').length + 1;
     
-    // Cria um novo div para o exercício
+    
     const novoExercicio = document.createElement('div');
     novoExercicio.classList.add('exercicio');
     novoExercicio.id = `exercicio-${numeroExercicios}`;
     
-    // Cria o conteúdo do novo exercício
+    
     novoExercicio.innerHTML = `
         <label for="nome-exercicio-${numeroExercicios}" class="exercise_input DMsans-titulo">Nome do Exercício</label>
         <input type="text" id="nome-exercicio-${numeroExercicios}" name="nome-exercicio" placeholder="Ex: Supino Inclinado"><br>
@@ -161,7 +161,7 @@ function adicionarExercicio() {
         <input type="number" id="repeticoes-${numeroExercicios}" name="repeticoes" placeholder="Repetições por Set" min="1"><br>
     `;
 
-    // Adiciona o novo exercício ao container de exercícios
+    
     document.getElementById('exercicios').appendChild(novoExercicio);
 }
 
@@ -189,7 +189,7 @@ function adicionarTreino() {
         const treinos = JSON.parse(localStorage.getItem('treinos')) || [];
         treinos.push({ titulo, exercicios });
         localStorage.setItem('treinos', JSON.stringify(treinos));
-        window.location.href = 'pag_2.2.html'; // Redireciona para a página de treinos
+        window.location.href = 'pag_2.2.html'; 
     } else {
         alert("Por favor, preencha todos os campos.");
     }
