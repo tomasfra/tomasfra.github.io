@@ -1,40 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <title>Treino | Novo Treino</title>
+        <title>Meus Treinos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="../css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
-        <script src="js/script.js"></script>
+        <script src="../js/script.js" defer></script>
     </head>
     <body>
         <main>
-            <h1 class="DMsans-titulo">Novo Treino</h1>
-
-            <label for="titulo" class="DMsans-titulo"><strong>Escolha o título do treino</strong></label>
-            <input type="text" id="titulo" name="titulo" placeholder="Ex: Treino de Peito"><br>
-
-            <h2 class="DMsans-titulo">Adicione seus Exercícios</h2>
+            <h1 class="DMsans-titulo">Meus Treinos</h1>
             
-            <div id="exercicios">
-                <!-- Os campos de exercícios serão adicionados aqui dinamicamente -->
-                <label for="exercicio-1" class="exercise_input DMsans-titulo">Nome do Exercício</label>
-                <input type="text" id="exercicio-1" name="exercicio" placeholder="Ex: Supino Inclinado"><br>
+            <section id="treinos">
+                <!-- Treinos serão carregados aqui dinamicamente -->
+            </section>
 
-                <label for="sets-1" class="DMsans-titulo">Número de Sets</label>
-                <input type="number" id="sets-1" name="sets" placeholder="Número de Sets" min="1"><br>
-
-                <label for="repeticoes-1" class="DMsans-titulo">Repetições por Set</label>
-                <input type="number" id="repeticoes-1" name="repeticoes" placeholder="Repetições por Set" min="1"><br>
-            </div>
-
-            <button class="botao_ok" onclick="adicionarExercicio()">Adicionar outro exercício</button>
-
-            <a href="pag_2.1.html" class="botao_ok .DMsans-texto" onclick="salvarTreino()">Salvar Treino</a>
+            <a href="pag_2.1.html" class="botao_ok" style="display:none;">Adicionar Novo Treino</a>
         </main>
 
         <footer>
@@ -44,84 +26,5 @@
             <a href="pag_1.1.html"><img src="../imagens/icone_lupa.png" alt="Busca"></a>
             <a href="tela_sub.html"><img src="../imagens/icone_ajustes.png" alt="Ajustes" class="barra"></a>
         </footer>
-
-        <script>
-            let exercicioCount = 1;
-
-            // Função para adicionar outro exercício
-            function adicionarExercicio() {
-                exercicioCount++;
-
-                // Criação dos novos campos para o exercício
-                const exerciciosContainer = document.getElementById('exercicios');
-
-                const nomeExercicioLabel = document.createElement("label");
-                nomeExercicioLabel.setAttribute("for", `exercicio-${exercicioCount}`);
-                nomeExercicioLabel.classList.add("exercise_input", "DMsans-titulo");
-                nomeExercicioLabel.textContent = "Nome do Exercício";
-
-                const nomeExercicioInput = document.createElement("input");
-                nomeExercicioInput.setAttribute("type", "text");
-                nomeExercicioInput.setAttribute("id", `exercicio-${exercicioCount}`);
-                nomeExercicioInput.setAttribute("name", "exercicio");
-                nomeExercicioInput.setAttribute("placeholder", "Ex: Supino Inclinado");
-
-                const setsLabel = document.createElement("label");
-                setsLabel.setAttribute("for", `sets-${exercicioCount}`);
-                setsLabel.classList.add("DMsans-titulo");
-                setsLabel.textContent = "Número de Sets";
-
-                const setsInput = document.createElement("input");
-                setsInput.setAttribute("type", "number");
-                setsInput.setAttribute("id", `sets-${exercicioCount}`);
-                setsInput.setAttribute("name", "sets");
-                setsInput.setAttribute("placeholder", "Número de Sets");
-                setsInput.setAttribute("min", "1");
-
-                const repeticoesLabel = document.createElement("label");
-                repeticoesLabel.setAttribute("for", `repeticoes-${exercicioCount}`);
-                repeticoesLabel.classList.add("DMsans-titulo");
-                repeticoesLabel.textContent = "Repetições por Set";
-
-                const repeticoesInput = document.createElement("input");
-                repeticoesInput.setAttribute("type", "number");
-                repeticoesInput.setAttribute("id", `repeticoes-${exercicioCount}`);
-                repeticoesInput.setAttribute("name", "repeticoes");
-                repeticoesInput.setAttribute("placeholder", "Repetições por Set");
-                repeticoesInput.setAttribute("min", "1");
-
-                // Adiciona os novos campos ao DOM
-                exerciciosContainer.appendChild(nomeExercicioLabel);
-                exerciciosContainer.appendChild(nomeExercicioInput);
-                exerciciosContainer.appendChild(setsLabel);
-                exerciciosContainer.appendChild(setsInput);
-                exerciciosContainer.appendChild(repeticoesLabel);
-                exerciciosContainer.appendChild(repeticoesInput);
-            }
-
-            // Função para salvar o treino
-            function salvarTreino() {
-                const titulo = document.getElementById("titulo").value;
-                const exercicios = [];
-
-                // Coleta todos os dados dos exercícios
-                for (let i = 1; i <= exercicioCount; i++) {
-                    const nomeExercicio = document.getElementById(`exercicio-${i}`).value;
-                    const sets = document.getElementById(`sets-${i}`).value;
-                    const repeticoes = document.getElementById(`repeticoes-${i}`).value;
-
-                    if (nomeExercicio && sets && repeticoes) {
-                        exercicios.push({
-                            nome: nomeExercicio,
-                            sets: sets,
-                            repeticoes: repeticoes
-                        });
-                    }
-                }
-
-                // Salvar o treino no localStorage
-                localStorage.setItem('treino', JSON.stringify({titulo, exercicios}));
-            }
-        </script>
     </body>
 </html>
