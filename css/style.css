@@ -134,3 +134,113 @@ footer a:hover {
 
 }
 
+.trirong-regular {
+    font-family: "Trirong", serif;
+    font-weight: 400;
+    font-style: normal;
+    flex-grow: 1;
+}
+
+.trirong-black-italic {
+    font-family: "Trirong", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.opicaoesporte-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.opicaoesporte-list li {
+    margin-bottom: 1rem;
+}
+
+.grupo_muscular { 
+    display: block;
+    padding: 1rem;
+    background-color: #4A6DD9;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.33rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 1.125rem;
+    font-family: "DM sans", serif;
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+.grupo_muscular:hover {
+    background-color: #2980b9;
+}
+
+.workout-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.workout-list li {
+    margin-bottom: 1rem;
+}
+
+
+
+.image_peito {
+    width: 10rem;
+    height: auto;
+    margin-bottom: 1.25rem;
+}
+
+p, li {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 1.25rem;
+}
+
+.produtos-list{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.7rem; 
+}
+
+.produtos-list li {
+    flex-basis: calc(33.33% - 0.66rem); 
+}
+
+.produtos-list img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.33rem;
+    font-weight: bold;
+}
+
+.DMsans-titulo {
+    font-family: "DM sans", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.DMsans-texto {
+    font-family: "DM sans", serif;
+    font-weight: 400;
+    font-style: normal;
+}
