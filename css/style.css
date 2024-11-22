@@ -110,3 +110,20 @@ footer a {
 footer a:hover {
     background-color: #03dac5;
 }
+
+.opcao_esporte { 
+    display: block;
+    padding: 1rem;
+    background-color: #4A6DD9;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.33rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 1.125rem;
+    font-family: "DM sans", serif;
+    font-weight: 900;
+    font-style: normal;
+
+}
+
